@@ -1,0 +1,64 @@
+
+
+*******************************************************************************
+File List
+*******************************************************************************
+
+This directory contains the binary distribution of SUGGEST 1.0.
+The files in this directory are the following:
+
+  libsuggest.a                  The user callable library of SUGGEST
+  tstsuggest                    Executable file for testing SUGGEST
+  tstsuggest.c                  The source file of the testing program.
+                                Use that as an example of how to use SUGGEST
+  MAKEFILE                      The makefile for building tstsuggest
+  manual.pdf                    SUGGEST's user manual
+  test.data                     The input file used by tstsuggest
+  COPYRIGHT                     SUGGEST's copyright notice and usage agreement
+  VERSION                       A file containing the version number of SUGGEST
+
+
+
+*******************************************************************************
+Testing
+*******************************************************************************
+
+To test SUGGEST use the following command 'tstsuggest test.data'. This will 
+generate an output similar to the following.
+
+prompt% tstsuggest test.data 
+Dataset Statistics: Nusers: 6502, Nitems: 23554, Ntrans; 90543
+-----------------------------------------------------------------------------
+Testing RType=1...
+  Bulding model [NNbr=20]...
+  Computing top-10 recommendations...
+    Nhits: 2279, InitTime: 0.53 secs, TopN-Rate: 19123.53 rcmds/sec
+
+-----------------------------------------------------------------------------
+Testing RType=2...
+  Estimating Alpha...  Alpha=0.20
+  Bulding model [NNbr=20]...
+  Computing top-10 recommendations...
+    Nhits: 2373, InitTime: 1.44 secs, TopN-Rate: 19703.00 rcmds/sec
+
+-----------------------------------------------------------------------------
+Testing RType=3...
+  Bulding model [NNbr=50]...
+  Computing top-10 recommendations...
+    Nhits: 2093, InitTime: 0.10 secs, TopN-Rate: 4745.98 rcmds/sec
+
+
+
+
+*******************************************************************************
+Contact Information
+*******************************************************************************
+
+If you have any questions or problems with SUGGEST please contact the authors
+at karypis@cs.umn.edu.
+
+
+--------------
+George Karypis
+11/7/00
+
